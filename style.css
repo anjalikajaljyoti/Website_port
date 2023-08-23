@@ -43,9 +43,10 @@ section{
 .skills .skills-content,
 .contact .contact-content{
     display: flex;
+    width: 100%;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 section .title{
     position: relative;
@@ -165,7 +166,7 @@ section .title::after{
 /* home section styling */
 .home{
     display: flex;
-    background: url("banner.jpg") no-repeat center;
+    background: url("images/banner.jpg") no-repeat center;
     height: 100vh;
     color: #fff;
     min-height: 500px;
@@ -193,7 +194,7 @@ section .title::after{
     margin: 5px 0;
 }
 .home .home-content .text-3 span{
-    color: #ed1426;
+    color: crimson;
     font-weight: 500;
 }
 .home .home-content a{
@@ -257,59 +258,85 @@ section .title::after{
     background: none;
 }
 
-/* services section styling */
-.services, .teams{
-    color:#fff;
-    background: #111;
+/* peoject section styling */
+.Project {
+    display: flex;
+    justify-content: space-between;
+    /* margin-top: 20px; */
+    margin-left: 2%;
+    margin-right:2%;
+    border-color: #f1f3f7;
+    /* background: #e1e2e4; */
+    border-left-width: 20px;
+    /* border-style: solid; */
+    border-top-width: 20px;
+   text-align: center;
 }
-.services .title::before,
-.teams .title::before{
-    background: #fff;
+
+.Proj-1, .Proj-2 {
+    width: 45%;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 15px;
 }
-.services .title::after,
-.teams .title::after{
-    background: #111;
-    content: "what i provide";
+.proj_title {
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 10px;
+    color: #333;
 }
-.services .serv-content .card{
-    width: calc(33% - 20px);
-    background: #222;
-    text-align: center;
-    border-radius: 6px;
-    padding: 50px 25px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-.services .serv-content .card:hover{
+.proj_btn {
     background: crimson;
-}
-.services .serv-content .card .box{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
     transition: all 0.3s ease;
 }
-.services .serv-content .card:hover .box{
-    transform: scale(1.05);
+.proj_img_1 {
+    display: block;
+    margin: 0 auto;
+    border-radius: 3px solid black;
 }
-.services .serv-content .card i{
-    font-size: 50px;
-    color: crimson;
-    transition: color 0.3s ease;
+.proj_img_1 {
+    display: block;
+    margin: 0 auto;
+    border-radius: 3px solid black;
+    max-width: 100%;  
+height: 10%;
+width: 300px;  
 }
-.services .serv-content .card:hover i{
-    color: #fff;
+.proj_img_2 {
+    display: block;
+    margin: 0 auto;
+    border-radius: 3px solid black;
 }
-.services .serv-content .card .text{
-    font-size: 25px;
-    font-weight: 500;
-    margin: 10px 0 7px 0;
+.proj_img_2 {
+    display: block;
+    margin: 0 auto;
+    border-radius: 3px solid black;
+    max-width: 100%;  
+height: 50%;
+width: 400px;  
 }
+/* skills section styling */
 
-/* skills section styling
+ .skills {
+    display: flex;
+    width: 100%;
+    /* border: 2px solid red; */
+    justify-content: center;
+    align-items: center;
 
-.skills .title::after{
-    content: "what i know";
-}
+ }
 .skills .skills-content .column{
-    width: calc(50% - 30px);
+    
+    /* width: calc(70% - 20px); */
+    width: 500px;
+
 }
 .skills .skills-content .left .text{
     font-size: 20px;
@@ -325,8 +352,8 @@ section .title::after{
     color: #fff;
     font-size: 18px;
     font-weight: 500;
-    padding: 8px 16px;
-    margin-top: 20px;
+    /* padding: 8px 16px; */
+    /* margin-top: 20px; */
     border-radius: 6px;
     border: 2px solid crimson;
     transition: all 0.3s ease;
@@ -336,7 +363,8 @@ section .title::after{
     background: none;
 }
 .skills .skills-content .right .bars{
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    margin-right: 0%;
 }
 .skills .skills-content .right .info{
     display: flex;
@@ -349,7 +377,7 @@ section .title::after{
     font-size: 18px;
 }
 .skills .skills-content .right .line{
-    height: 5px;
+    height: 10px;
     width: 100%;
     background: lightgrey;
     position: relative;
@@ -366,10 +394,10 @@ section .title::after{
     width: 90%;
 }
 .skills-content .right .css::before{
-    width: 60%;
+    width: 75%;
 }
 .skills-content .right .js::before{
-    width: 80%;
+    width: 60%;
 }
 .skills-content .right .php::before{
     width: 50%;
@@ -377,70 +405,37 @@ section .title::after{
 .skills-content .right .mysql::before{
     width: 70%;
 }
-
-/* teams section styling */
-/* .teams .title::after{
-    content: "who with me";
-}
-.teams .carousel .card{
-    background: #222;
-    border-radius: 6px;
-    padding: 25px 35px;
-    text-align: center;
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
-.teams .carousel .card:hover{
-    background: crimson;
-}
-.teams .carousel .card .box{
+.skills{
+    width: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.skill{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(233, 233, 233);
+    border-radius: 10px;
+    flex-direction: column;
+    padding: 30px;
+    /* border: 2px solid red; */
+}
+.title{
+    margin: auto;
+}
+
+.skills-content{
+    display: flex;
+    width: 80%;
+    height: 300px;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
+    /* border: 1px solid rgb(38, 47, 214); */
+    justify-content: space-evenly;
+    
 }
-.teams .carousel .card:hover .box{
-    transform: scale(1.05);
-}
-.teams .carousel .card .text{
-    font-size: 25px;
-    font-weight: 500;
-    margin: 10px 0 7px 0;
-}
-.teams .carousel .card img{
-    height: 150px;
-    width: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid crimson;
-    transition: all 0.3s ease;
-}
-.teams .carousel .card:hover img{
-    border-color: #fff;
-}
-.owl-dots{
-    text-align: center;
-    margin-top: 20px;
-}
-.owl-dot{
-    height: 13px;
-    width: 13px;
-    margin: 0 5px;
-    outline: none!important;
-    border-radius: 50%;
-    border: 2px solid crimson!important;
-    transition: all 0.3s ease;
-}
-.owl-dot.active{
-    width: 35px;
-    border-radius: 14px;
-}
-.owl-dot.active,
-.owl-dot:hover{
-    background: crimson!important;
-}  */
-
 
 /* contact section styling */
 .contact .title::after{
@@ -475,8 +470,11 @@ section .title::after{
 .contact .contact-content .info .head{
     font-weight: 500;
 }
-.contact .contact-content .info .sub-title{
+.contact .contact-content .info .sub-title {
     color: #333;
+}
+.sub-title:hover{
+    cursor: pointer;
 }
 .contact .right form .fields{
     display: flex;
@@ -554,7 +552,7 @@ footer span a:hover{
 
 
 /* responsive media query start */
-/* @media (max-width: 1104px) {
+@media (max-width: 1104px) {
     .about .about-content .left img{
         height: 350px;
         width: 350px;
@@ -678,4 +676,4 @@ footer span a:hover{
         font-size: 23px;
         line-height: 38px;
     }
-} */
+}
