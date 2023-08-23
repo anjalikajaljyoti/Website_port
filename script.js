@@ -1,14 +1,15 @@
 $(document).ready(function(){
+    $('.navbar').addClass("sticky");
     $(window).scroll(function(){
         // sticky navbar on scroll script
-        if(this.scrollY > 20){
+        if(this.scrollY > 0){
             $('.navbar').addClass("sticky");
         }else{
             $('.navbar').removeClass("sticky");
         }
         
         // scroll-up button show/hide script
-        if(this.scrollY > 500){
+        if(this.scrollY > 10){
             $('.scroll-up-btn').addClass("show");
         }else{
             $('.scroll-up-btn').removeClass("show");
@@ -35,18 +36,18 @@ $(document).ready(function(){
 
     // typing text animation script
     var typed = new Typed(".typing", {
-        strings: [ "Developer", "Designer",],
+        strings: ["YouTuber", "Developer", "Blogger", "Designer", "Freelancer"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
     });
 
-    // var typed = new Typed(".typing-2", {
-    //     strings: ["YouTuber", "Developer", "Blogger", "Designer", "Freelancer"],
-    //     typeSpeed: 100,
-    //     backSpeed: 60,
-    //     loop: true
-    // });
+    var typed = new Typed(".typing-2", {
+        strings: ["YouTuber", "Developer", "Blogger", "Designer", "Freelancer"],
+        typeSpeed: 100,
+        backSpeed: 60,
+        loop: true
+    });
 
     // owl carousel script
     $('.carousel').owlCarousel({
